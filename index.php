@@ -7,11 +7,11 @@
   <body>
     <p>
 <?php
-  echo $_GET['language']
-?>
-<br />
-<?php
-  echo $_GET['server'];
+/*Vérification des paramètres de l'url*/
+if(isset($_GET['language']) && isset($_GET['server'])){
+  /*Affichage des paramètres*/
+  echo $_GET['language'] . ' ' . $_GET['server'];
+}
 ?>
     </p>
   </body>
