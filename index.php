@@ -6,13 +6,25 @@
   </head>
   <body>
     <p>
-<?php
-/*Vérification des paramètres de l'url*/
-if(isset($_GET['language']) && isset($_GET['server'])){
-  /*Affichage des paramètres*/
-  echo $_GET['language'] . ' ' . $_GET['server'];
-}
-?>
+        <?php
+            if(!empty($_GET['language'])){
+                //Affichage des paramètres
+              echo $_GET['language'];
+            } //Condition si le paramètre n'existe pas
+              else {
+                echo 'Le paramètre language est manquant !';
+            }
+            ?>
+     <br />
+        <?php
+            if(!empty($_GET['server'])){
+                //Affichage des paramètres
+              echo $_GET['server'];
+            } //Condition si le paramètre n'existe pas
+              else {
+                echo 'Le paramètre server est manquant !';
+            }
+        ?>
     </p>
   </body>
 </html>
